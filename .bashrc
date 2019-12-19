@@ -1,9 +1,5 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # If not running interactively, don't do anything
-#[ -z "$PS1" ] && return
+[ -z "$PS1" ] && return
 
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
@@ -15,31 +11,19 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-#if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-#    debian_chroot=$(cat /etc/debian_chroot)
-#fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-#case "$TERM" in
-#xterm-color)
-#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-#    ;;
-#*)
-#    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-#    ;;
-#esac
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
 # Comment in the above and uncomment this below for a color prompt
-BLUE_BACKGROUND_CYAN_TEXT="\[\033[44m\]\[\033[36m\]"
+BLUE_BG_CYAN="\[\033[44m\]\[\033[36m\]"
 GRAY="\[\033[1;30m\]"
-NO_COLOUR="\[\033[0m\]"
+RESET="\[\033[0m\]"
 CYAN="\[\033[0;36m\]"
 LIGHT_CYAN="\[\033[1;36m\]"
-PS1="${BLUE_BACKGROUND_CYAN_TEXT}\t${NO_COLOUR}${CYAN} \u${GRAY}@${CYAN}\h${LIGHT_CYAN}\w${GRAY}$ ${NO_COLOUR}"
-
-#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-#PS1='\t${debian_chroot:+($debian_chroot)}\[\033[01;32m\] \u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+BRANCH="\$(parse_git_branch)"
+PS1="${BLUE_BG_CYAN}\t${RESET}${CYAN} \u${GRAY}@${CYAN}\h${LIGHT_CYAN}\w${CYAN}${BRANCH} ${GRAY}\$${RESET} "
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -81,5 +65,4 @@ fi
 
 # Change colors for ls console command
 export CLICOLOR=1
-#export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export LSCOLORS=ExFxCxDxBxegedabagacad
