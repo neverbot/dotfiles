@@ -11,7 +11,6 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
-
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
@@ -23,7 +22,7 @@ RESET="\[\033[0m\]"
 CYAN="\[\033[0;36m\]"
 LIGHT_CYAN="\[\033[1;36m\]"
 BRANCH="\$(parse_git_branch)"
-PS1="${BLUE_BG_CYAN}\t${RESET}${CYAN} \u${GRAY}@${CYAN}\h${LIGHT_CYAN}\w${CYAN}${BRANCH} ${GRAY}\$${RESET} "
+PS1="${BLUE_BG_CYAN}\t${RESET}${CYAN} \u${GRAY}@${CYAN}\h${LIGHT_CYAN}\w${CYAN}${BRANCH}${GRAY}\$${RESET} "
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
