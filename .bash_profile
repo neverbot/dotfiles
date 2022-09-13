@@ -19,4 +19,4 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
-export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH
