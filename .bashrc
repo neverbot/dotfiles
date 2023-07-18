@@ -2,9 +2,9 @@
 [ -z "$PS1" ] && return
 
 # don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
 HISTCONTROL=ignoreboth
-
+# put in history after every command (useful with multiple sessions)
+PROMPT_COMMAND='history -a ; history -r'
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -33,22 +33,13 @@ BRANCH="\$(parse_git_branch)"
 PS1="${BLUE_BG_CYAN}\t${RESET}${CYAN} \u${GRAY}@${CYAN}\h${LIGHT_CYAN}\w${CYAN}${BRANCH}${GRAY}\$${RESET} "
 
 # If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
-    ;;
-*)
-    ;;
-esac
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-#if [ -f ~/.bash_aliases ]; then
-#    . ~/.bash_aliases
-#fi
+#case "$TERM" in
+#xterm*|rxvt*)
+#    PROMPT_COMMAND='$PROMPT_COMMAND;echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+#    ;;
+#*)
+#    ;;
+#esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -84,5 +75,16 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # Change colors for ls console command
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
+CLICOLOR=1
+LSCOLORS=ExFxCxDxBxegedabagacad
+
+# node version manager
+NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# go lang variables
+GOPATH=$HOME/go
+GOROOT=/opt/homebrew/opt/go/libexec
+PATH=$PATH:$GOPATH/bin
+PATH=$PATH:$GOROOT/bin
