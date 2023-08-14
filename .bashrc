@@ -5,6 +5,7 @@
 HISTCONTROL=ignoreboth
 # put in history after every command (useful with multiple sessions)
 PROMPT_COMMAND='history -a ; history -r'
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -88,3 +89,9 @@ GOPATH=$HOME/go
 GOROOT=/opt/homebrew/opt/go/libexec
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$GOROOT/bin
+
+# to avoid "The default interactive shell is now zsh." messages in macos:
+# BASH_SILENCE_DEPRECATION_WARNING=1
+# or use an updated version of bash (the one included in macos is old)
+# brew update && brew install bash
+# sudo chsh -s /opt/homebrew/bin/bash $(whoami)
