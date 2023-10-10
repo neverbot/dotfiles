@@ -79,11 +79,6 @@ fi
 CLICOLOR=1
 LSCOLORS=ExFxCxDxBxegedabagacad
 
-# node version manager
-NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # go lang variables
 GOPATH=$HOME/go
 GOROOT=/opt/homebrew/opt/go/libexec
@@ -95,3 +90,10 @@ PATH=$PATH:$GOROOT/bin
 # or use an updated version of bash (the one included in macos is old)
 # brew update && brew install bash
 # sudo chsh -s /opt/homebrew/bin/bash $(whoami)
+
+export PATH=/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:$PATH
+
+# node version manager
+NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
