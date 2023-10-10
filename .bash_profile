@@ -5,18 +5,19 @@
 # the default umask is set in /etc/login.defs
 # umask 022
 
-# include .bashrc if it exists
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
-
-# locales
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
-export PATH=/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH
+# include .bashrc if it exists
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+eval "$(rbenv init - bash)"
+
+# help with macos not finding python
+alias python=/usr/bin/python3
