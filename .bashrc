@@ -79,12 +79,6 @@ fi
 CLICOLOR=1
 LSCOLORS=ExFxCxDxBxegedabagacad
 
-# go lang variables
-GOPATH=$HOME/go
-GOROOT=/opt/homebrew/opt/go/libexec
-PATH=$PATH:$GOPATH/bin
-PATH=$PATH:$GOROOT/bin
-
 # to avoid "The default interactive shell is now zsh." messages in macos:
 # BASH_SILENCE_DEPRECATION_WARNING=1
 # or use an updated version of bash (the one included in macos is old)
@@ -92,6 +86,12 @@ PATH=$PATH:$GOROOT/bin
 # sudo chsh -s /opt/homebrew/bin/bash $(whoami)
 
 export PATH=/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:$PATH
+
+# go lang variables
+GOPATH=$HOME/go
+GOROOT=/opt/homebrew/opt/go/libexec
+PATH=$GOPATH/bin:$PATH
+PATH=$GOROOT/bin:$PATH
 
 # node version manager
 NVM_DIR="$HOME/.nvm"
