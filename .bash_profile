@@ -17,6 +17,7 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+# rbenv, choosing ruby version
 eval "$(rbenv init - bash)"
 
 # help with macos not finding python
