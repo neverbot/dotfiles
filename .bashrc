@@ -85,7 +85,7 @@ LSCOLORS=ExFxCxDxBxegedabagacad
 # brew update && brew install bash
 # sudo chsh -s /opt/homebrew/bin/bash $(whoami)
 
-export PATH=/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:$HOME/.local/bin:$PATH
 
 # go lang variables
 GOPATH=$HOME/go
