@@ -24,7 +24,6 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-# Comment in the above and uncomment this below for a color prompt
 BLUE_BG_CYAN="\[\033[44m\]\[\033[36m\]"
 GRAY="\[\033[1;30m\]"
 RESET="\[\033[0m\]"
@@ -79,21 +78,24 @@ fi
 CLICOLOR=1
 LSCOLORS=ExFxCxDxBxegedabagacad
 
-# to avoid "The default interactive shell is now zsh." messages in macos:
-# BASH_SILENCE_DEPRECATION_WARNING=1
-# or use an updated version of bash (the one included in macos is old)
-# brew update && brew install bash
-# sudo chsh -s /opt/homebrew/bin/bash $(whoami)
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # to avoid "The default interactive shell is now zsh." messages in macos:
+  # BASH_SILENCE_DEPRECATION_WARNING=1
+  # or use an updated version of bash (the one included in macos is old)
+  # brew update && brew install bash
+  # sudo chsh -s /opt/homebrew/bin/bash $(whoami)
 
-export PATH=/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.local/bin:$PATH
+  export PATH=/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.local/bin:$PATH
 
-# go lang variables
-GOPATH=$HOME/go
-GOROOT=/opt/homebrew/opt/go/libexec
-PATH=$GOPATH/bin:$PATH
-PATH=$GOROOT/bin:$PATH
+  # go lang variables
+  GOPATH=$HOME/go
+  GOROOT=/opt/homebrew/opt/go/libexec
+  PATH=$GOPATH/bin:$PATH
+  PATH=$GOROOT/bin:$PATH
 
-# node version manager
-NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  # node version manager
+  NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
