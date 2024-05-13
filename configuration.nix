@@ -6,17 +6,17 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ # Include the results of the hardware scan
       ./hardware-configuration.nix
     ];
 
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking = {
-    hostName = "qwerty"; # Define your hostname.
-    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    hostName = "qwerty"; # Define your hostname
+    # wireless.enable = true;  # Enables wireless support via wpa_supplicant
 
     # Configure network proxy if necessary
     # proxy.default = "http://user:password@proxy:port/";
@@ -24,6 +24,12 @@
 
     # Enable networking
     networkmanager.enable = true;
+
+    # Open ports in the firewall
+    # firewall.allowedTCPPorts = [ ... ];
+    # firewall.allowedUDPPorts = [ ... ];
+    # Or disable the firewall altogether
+    # firewall.enable = false;
   };
 
   # Set your time zone.
@@ -93,6 +99,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.neverbot = {
+    shell = pkgs.bash;
     isNormalUser = true;
     description = "neverbot";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -105,12 +112,27 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim neovim wget git gh onefetch
+  environment = {
+    shells = with pkgs; [ bash ];
+
+    variables = {
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+    };
+
+    # List packages installed in system profile. To search, run:
+    # $ nix search wget
     # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  ];
+    systemPackages = with pkgs; [
+      vim 
+      neovim 
+      wget 
+      git 
+      gh         # github cli 
+      onefetch   # git repository summary
+      neofetch   # system info
+    ];
+  };
 
   programs = {
     neovim = {
@@ -135,12 +157,6 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -148,5 +164,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }
