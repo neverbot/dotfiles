@@ -15,10 +15,14 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+# if we are on macOS
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-# rbenv, choosing ruby version
-eval "$(rbenv init - bash)"
+  # rbenv, choosing ruby version
+  eval "$(rbenv init - bash)"
 
-# help with macos not finding python
-alias python=/usr/bin/python3
+  # help with macos not finding python
+  alias python=/usr/bin/python3
+fi
+
