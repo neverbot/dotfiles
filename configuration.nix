@@ -14,15 +14,17 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "qwerty"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking = {
+    hostName = "qwerty"; # Define your hostname.
+    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+    # Configure network proxy if necessary
+    # proxy.default = "http://user:password@proxy:port/";
+    # proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
+    # Enable networking
+    networkmanager.enable = true;
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
@@ -42,17 +44,28 @@
     LC_TIME = "es_ES.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
   services.xserver = {
+    # Enable the X11 windowing system.
+    enable = true;
+
+    # Enable the GNOME Desktop Environment.
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+
+    # Configure keymap in X11
     layout = "es";
     xkbVariant = "";
+
+    libinput = {
+      # Enable touchpad support (enabled default in most desktopManager).
+      enable = true;
+      touchpad = {
+        naturalScrolling = false;
+      };
+      mouse = {
+        accelProfile = "flat";
+      };
+    };
   };
 
   # Configure console keymap
@@ -78,17 +91,6 @@
     #media-session.enable = true;
   };
 
-  services.xserver.libinput = {
-    # Enable touchpad support (enabled default in most desktopManager).
-    enable = true;
-    touchpad = {
-      naturalScrolling = false;
-    };
-    mouse = {
-      accelProfile = "flat";
-    };
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.neverbot = {
     isNormalUser = true;
@@ -109,6 +111,16 @@
     vim neovim wget git gh
     # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
+
+  programs = {
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+
+      viAlias = true;
+      vimAlias = true;
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
