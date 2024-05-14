@@ -51,22 +51,24 @@
     LC_TIME = "es_ES.UTF-8";
   };
 
-  services.xserver = {
-    # Enable the X11 windowing system.
-    enable = true;
+  services = {
+    xserver = {
+      # Enable the X11 windowing system.
+      enable = true;
 
-    # the display manager handles user login
-    # compatible with wayland: gdm, sddm
-    # displayManager.sddm.enable = true;
-    displayManager.gdm.enable = true;
+      # the display manager handles user login
+      # compatible with wayland: gdm, sddm
+      # displayManager.sddm.enable = true;
+      displayManager.gdm.enable = true;
 
-    # Enable the GNOME Desktop Environment
-    # desktopManager.gnome.enable = true;
+      # Enable the GNOME Desktop Environment
+      # desktopManager.gnome.enable = true;
 
-    # Configure keymap in X11
-    xkb = {
-      layout = "es";
-      variant = "";      
+      # Configure keymap in X11
+      xkb = {
+        layout = "es";
+        variant = "";      
+      };
     };
 
     libinput = {
