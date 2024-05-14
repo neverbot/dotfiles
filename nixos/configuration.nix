@@ -237,7 +237,8 @@
       kitty = {
         enable = true;
         settings = {
-          window_padding_width = 10;
+          # padding vertical and horizontal
+          window_padding_width = "5 10";
         };
       };
     };
