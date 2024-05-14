@@ -54,9 +54,11 @@
     # Enable the X11 windowing system.
     enable = true;
 
+    displayManager.sddm.enable = true;    
+
     # Enable the GNOME Desktop Environment.
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    # displayManager.gdm.enable = true;
+    # desktopManager.gnome.enable = true;
 
     # Configure keymap in X11
     layout = "es";
@@ -104,8 +106,8 @@
     description = "neverbot";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
-    #  thunderbird
+      # firefox
+      # thunderbird
     ];
   };
 
@@ -131,6 +133,15 @@
       gh         # github cli 
       onefetch   # git repository summary
       neofetch   # system info
+
+      # from here, hyprland related packages
+      hyprland
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
+      wayland
+      kitty      # default terminal in hyprland
+      firefox-wayland
+      waybar
     ];
   };
 
@@ -141,6 +152,11 @@
 
       viAlias = true;
       vimAlias = true;
+    };
+
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
     };
   };
 
