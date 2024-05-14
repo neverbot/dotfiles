@@ -164,6 +164,10 @@
       enable = true;
       xwayland.enable = true;
     };
+
+    waybar = {
+      enable = true;
+    };
   };
 
   fonts = {
@@ -225,11 +229,6 @@
         userName = "neverbot";
         userEmail = "ivan@neverbot.com";
       };
-    };
-
-    waybar = {
-      enable = true;
-      systemd.enable = true;
     };
   };
 }
