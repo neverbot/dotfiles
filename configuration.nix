@@ -129,18 +129,18 @@
     # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     systemPackages = with pkgs; [
       vim 
-      neovim 
+      neovim
+      nano 
       wget 
       git 
       gh         # github cli 
       onefetch   # git repository summary
       neofetch   # system info
+      lynx       # text-mode web browser
 
-      # from here, hyprland related packages
-      hyprland
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-hyprland
+      # from here, wayland + hyprland related packages
       wayland
+      hyprland
       kitty      # default terminal in hyprland
       firefox-wayland
       waybar
@@ -160,6 +160,14 @@
       enable = true;
       xwayland.enable = true;
     };
+  };
+
+  fonts = {
+    fontDir.enable = true;
+    packages = with pkgs; [
+      nerdfonts
+      font-awesome
+    ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are
