@@ -226,5 +226,9 @@
       };
     };
 
+    waybar = {
+      enable = true;
+      systemd.enable = true;
+    };
   };
 }
