@@ -64,8 +64,10 @@
     # desktopManager.gnome.enable = true;
 
     # Configure keymap in X11
-    layout = "es";
-    xkbVariant = "";
+    xkb = {
+      layout = "es";
+      variant = "";      
+    };
 
     libinput = {
       # Enable touchpad support (enabled default in most desktopManager)
