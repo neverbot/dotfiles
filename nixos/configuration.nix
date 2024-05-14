@@ -233,6 +233,13 @@
         userName = "neverbot";
         userEmail = "ivan@neverbot.com";
       };
+
+      kitty = {
+        enable = true;
+        settings = {
+          window_padding_width = 10;
+        };
+      };
     };
   };
 }
