@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan
       ./hardware-configuration.nix
+      <home-manager/nixos>
     ];
 
   # Bootloader
@@ -190,4 +191,20 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
+
+  # home manager configuration
+  home-manager.users.neverbot = { pkgs, ... }: {
+    # same as above
+    home.stateVersion = "23.11";
+    home.packages = [ ];
+
+    programs = {
+      git = {
+        enable = true;
+        userName = "neverbot";
+        userEmail = "ivan@neverbot.com";
+      };
+    };
+
+  };
 }
