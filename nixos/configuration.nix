@@ -208,6 +208,7 @@
 
     wayland.windowManager.hyprland = {
       enable = true;
+      systemd.enable = true;
       extraConfig = ''
         ${builtins.readFile /home/neverbot/dotfiles/nixos/hyprland.conf}
       '';
