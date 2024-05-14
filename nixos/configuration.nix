@@ -102,7 +102,7 @@
     # media-session.enable = true;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with ‘passwd’
   users.users.neverbot = {
     shell = pkgs.bash;
     isNormalUser = true;
@@ -127,22 +127,24 @@
 
     # List packages installed in system profile. To search, run:
     # $ nix search wget
-    # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default
     systemPackages = with pkgs; [
       vim 
       neovim
       nano 
       wget 
       git 
-      gh         # github cli 
-      onefetch   # git repository summary
-      neofetch   # system info
-      lynx       # text-mode web browser
+      gh           # github cli 
+      onefetch     # git repository summary
+      neofetch     # system info
+      lynx         # text-mode web browser
+
+      home-manager # user environment management
 
       # from here, wayland + hyprland related packages
       wayland
       hyprland
-      kitty      # default terminal in hyprland
+      kitty        # default terminal in hyprland
       firefox-wayland
       waybar
     ];
@@ -172,7 +174,7 @@
   };
 
   # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
+  # started in user sessions
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
   #   enable = true;
@@ -181,7 +183,7 @@
 
   # List services that you want to enable:
 
-  # Enable the OpenSSH daemon.
+  # Enable the OpenSSH daemon
   # services.openssh.enable = true;
 
   # This value determines the NixOS release from which the default
@@ -194,11 +196,29 @@
 
   # home manager configuration
   home-manager.users.neverbot = { pkgs, ... }: {
-    # same as above
-    home.stateVersion = "23.11";
-    home.packages = [ ];
+
+    wayland.windowManager.hyprland = {
+      enable = true;
+      extraConfig = ''
+        ${builtins.readFile /home/neverbot/dotfiles/nixos/hyprland.conf}
+      '';
+    };
+
+    home = {
+      # same as above
+      stateVersion = "23.11";
+      packages = [ ];
+
+      username = "neverbot";
+      homeDirectory = "/home/neverbot";
+    };
 
     programs = {
+      home-manager = {
+        enable = true;
+        path = "$HOME/.config/home-manager";
+      };
+
       git = {
         enable = true;
         userName = "neverbot";
