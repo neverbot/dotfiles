@@ -146,7 +146,8 @@
       hyprland
       kitty        # default terminal in hyprland
       firefox-wayland
-      waybar
+      waybar       # app bar
+      hyprpaper    # wallpapers
     ];
   };
 
