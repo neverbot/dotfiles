@@ -176,6 +176,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
 
   environment = {
     shells = with pkgs; [ bash ];
