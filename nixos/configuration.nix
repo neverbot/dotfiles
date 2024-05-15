@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -17,6 +17,7 @@
 
   networking = {
     hostName = "qwerty"; # Define your hostname
+    # not needed when networkmanager is enabled
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant
 
     # Configure network proxy if necessary
@@ -117,6 +118,19 @@
       # thunderbird
     ];
   };
+
+  # no need to input password when this user uses sudo
+  security.sudo.extraRules = [
+    {
+      users = [ "neverbot" ];
+      commands = [
+        {
+          command = "ALL";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -248,14 +262,10 @@
 
       waybar = {
         enable = true;
-        settings = [
-          '' 
-          ${builtins.fromJSON (builtins.readFile /home/neverbot/dotfiles/nixos/waybar.conf)}
-          ''
-        ];
-        style = ''
-          ${builtins.readFile /home/neverbot/dotfiles/nixos/waybar.css}
-        '';
+#        settings = lib.importJSON /home/neverbot/dotfiles/nixos/waybar.conf;
+#        style = ''
+#          ${builtins.readFile /home/neverbot/dotfiles/nixos/waybar.css}
+#        '';
       };
     };
   };
