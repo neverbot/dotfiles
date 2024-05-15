@@ -158,14 +158,16 @@
       home-manager # user environment management
 
       # from here, wayland + hyprland related packages
-      wayland
-      hyprland
+      wayland      # wayland protocol
+      hyprland     # hyprland window manager
       kitty        # default terminal in hyprland
       firefox-wayland
       waybar       # app bar
       hyprpaper    # wallpapers
       wl-clipboard # clipboard manager
       wtype        # type special characters
+      grim         # screenshot
+      slurp        # select area for screenshot
     ];
   };
 
