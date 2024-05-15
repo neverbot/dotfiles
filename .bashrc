@@ -25,12 +25,12 @@ parse_git_branch() {
 }
 
 BLUE_BG_CYAN="\[\033[44m\]\[\033[36m\]"
-GRAY="\[\033[1;30m\]"
+LIGHT_BLUE="\[\033[1;34m\]"
 RESET="\[\033[0m\]"
 CYAN="\[\033[0;36m\]"
 LIGHT_CYAN="\[\033[1;36m\]"
 BRANCH="\$(parse_git_branch)"
-PS1="${BLUE_BG_CYAN}\t${RESET}${CYAN} \u${GRAY}@${CYAN}\h${LIGHT_CYAN}\w${CYAN}${BRANCH}${GRAY}\$${RESET} "
+PS1="${BLUE_BG_CYAN}\t${RESET}${CYAN} \u${LIGHT_BLUE}@${CYAN}\h${LIGHT_CYAN}\w${CYAN}${BRANCH}${LIGHT_BLUE}\$${RESET} "
 
 # If this is an xterm set the title to user@host:dir
 #case "$TERM" in
