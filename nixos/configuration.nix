@@ -153,8 +153,6 @@
       wget 
       git 
       gh           # github cli 
-      onefetch     # git repository summary
-      neofetch     # system info
       lynx         # text-mode web browser
 
       home-manager # user environment management
@@ -223,8 +221,13 @@
     home = {
       # same as above
       stateVersion = "23.11";
-      packages = [ ];
-
+      packages = with pkgs; [ 
+        onefetch     # git repository summary
+        neofetch     # system info
+        btop
+        htop        
+      ];
+      
       username = "neverbot";
       homeDirectory = "/home/neverbot";
  
