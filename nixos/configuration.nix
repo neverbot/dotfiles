@@ -220,17 +220,6 @@
   # home manager configuration
   home-manager.users.neverbot = { pkgs, ... }: {
 
-    wayland.windowManager.hyprland = {
-      enable = true;
-      # systemd = {
-      #   enable = true;
-      #   variables = [ "--all" ];
-      # };
-      extraConfig = ''
-        ${builtins.readFile /home/neverbot/dotfiles/nixos/hyprland.conf}
-      '';
-    };
-
     home = {
       # same as above
       stateVersion = "23.11";
@@ -238,7 +227,30 @@
 
       username = "neverbot";
       homeDirectory = "/home/neverbot";
+ 
+      # copy some needed config files
+      file = {
+        ".config/hypr" = {
+          source = /home/neverbot/dotfiles/nixos/hypr;
+          recursive = true;
+        };
+        ".config/waybar" = {
+          source = /home/neverbot/dotfiles/nixos/waybar;
+          recursive = true;
+        };
+      };
     };
+
+    # as we are copying the hyprland.config in home.file, there is no need
+    # for any other particular user configuration here
+    # we can comment it to avoid a warning saying this is maybe an error
+    # because it is empty
+    # wayland.windowManager.hyprland = {
+      # enable = true;
+      # extraConfig = ''
+      #   ${builtins.readFile /home/neverbot/dotfiles/nixos/hyprland.conf}
+      # '';
+    # };
 
     programs = {
       home-manager = {
@@ -262,10 +274,7 @@
 
       waybar = {
         enable = true;
-#        settings = lib.importJSON /home/neverbot/dotfiles/nixos/waybar.conf;
-#        style = ''
-#          ${builtins.readFile /home/neverbot/dotfiles/nixos/waybar.css}
-#        '';
+        style = "style.css";
       };
     };
   };
