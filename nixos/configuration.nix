@@ -155,7 +155,6 @@
       gh           # github cli 
       lynx         # text-mode web browser
       lshw
-      toybox
 
       home-manager # user environment management
 
