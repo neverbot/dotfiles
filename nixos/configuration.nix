@@ -245,6 +245,16 @@
           window_padding_width = "5 10";
         };
       };
+
+      waybar = {
+        enable = true;
+        settings = ''
+          ${builtins.readFile /home/neverbot/dotfiles/nixos/waybar.conf}
+        '';
+        style = ''
+          ${builtins.readFile /home/neverbot/dotfiles/nixos/waybar.css}
+        '';
+      };
     };
   };
 }
