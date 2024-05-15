@@ -164,6 +164,8 @@
       firefox-wayland
       waybar       # app bar
       hyprpaper    # wallpapers
+      wl-clipboard # clipboard manager
+      wtype        # type special characters
     ];
   };
 
