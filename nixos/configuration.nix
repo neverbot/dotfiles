@@ -153,6 +153,8 @@
       wget 
       git 
       gh           # github cli 
+      onefetch     # git repository summary
+      neofetch     # system info
       lynx         # text-mode web browser
 
       home-manager # user environment management
@@ -221,13 +223,8 @@
     home = {
       # same as above
       stateVersion = "23.11";
-      packages = with pkgs; [ 
-        onefetch     # git repository summary
-        neofetch     # system info
-        btop
-        htop        
-      ];
-      
+      packages = [ ];
+
       username = "neverbot";
       homeDirectory = "/home/neverbot";
  
@@ -273,11 +270,6 @@
           # padding vertical and horizontal
           window_padding_width = "5 10";
         };
-      };
-
-      waybar = {
-        enable = true;
-        style = "style.css";
       };
     };
   };
