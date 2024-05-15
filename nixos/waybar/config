@@ -2,21 +2,21 @@
   "layer" : "top",
   "position" : "top",
   "modules-left" : [
-    "custom/launcher"
-    "temperature"
-    "mpd"
+    "custom/launcher",
+    "temperature",
+    "mpd",
     "custom/cava-internal"
   ],
   "modules-center" : [
     "clock"
   ],
   "modules-right" : [
-    "pulseaudio"
-    "backlight"
-    "memory"
-    "cpu"
-    "network"
-    "custom/powermenu"
+    "pulseaudio",
+    "backlight",
+    "memory",
+    "cpu",
+    "network",
+    "custom/powermenu",
     "tray"
   ],
   "custom/launcher" : {
@@ -35,7 +35,7 @@
     "format" : "{icon} {volume}%",
     "format-muted" : "󰖁 Muted",
     "format-icons" : {
-      "default" : [ "" "" "" ],
+      "default" : [ "", "", "" ],
     },
     "on-click" : "pamixer -t",
     "tooltip" : false,
