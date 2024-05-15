@@ -155,6 +155,8 @@
       gh           # github cli 
       lynx         # text-mode web browser
       lshw
+      pciutils
+      inxi
 
       home-manager # user environment management
 
