@@ -224,8 +224,9 @@
       packages = with pkgs; [ 
         onefetch     # git repository summary
         neofetch     # system info
-        btop
-        htop        
+        htop         # system monitor
+        btop         # htop alternative
+        pamixer      # pulseaudio mixer
       ];
 
       username = "neverbot";
