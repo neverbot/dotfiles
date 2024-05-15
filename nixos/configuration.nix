@@ -248,7 +248,11 @@
 
       waybar = {
         enable = true;
-        settings = builtins.fromJSON (builtins.readFile /home/neverbot/dotfiles/nixos/waybar.conf);
+        settings = [
+          '' 
+          ${builtins.fromJSON (builtins.readFile /home/neverbot/dotfiles/nixos/waybar.conf)}
+          ''
+        ];
         style = ''
           ${builtins.readFile /home/neverbot/dotfiles/nixos/waybar.css}
         '';
