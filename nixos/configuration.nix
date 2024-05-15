@@ -15,6 +15,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.initrd.kernelModules = [ "nvidia" ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.nvidiaPackages.legacy_340 ];
+
   networking = {
     hostName = "qwerty"; # Define your hostname
     # not needed when networkmanager is enabled
@@ -197,9 +200,9 @@
       git 
       gh           # github cli 
       lynx         # text-mode web browser
-      lshw
-      pciutils
-      inxi
+      lshw         # hardware info
+      pciutils     # hardware info
+      inxi         # hardware info
 
       home-manager # user environment management
 
