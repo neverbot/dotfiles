@@ -54,42 +54,42 @@
 
   # uncomment for nvidia drivers
   # Enable OpenGL
-  # hardware.opengl = {
-  #   enable = true;
-  #   driSupport = true;
-  #   driSupport32Bit = true;
-  # };
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
 
-  # hardware.nvidia = {
-  #   # Modesetting is required
-  #   modesetting.enable = true;
+  hardware.nvidia = {
+    # Modesetting is required
+    modesetting.enable = true;
 
-  #   # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-  #   # Enable this if you have graphical corruption issues or application crashes after waking
-  #   # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
-  #   # of just the bare essentials.
-  #   powerManagement.enable = false;
+    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
+    # Enable this if you have graphical corruption issues or application crashes after waking
+    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
+    # of just the bare essentials.
+    powerManagement.enable = false;
 
-  #   # Fine-grained power management. Turns off GPU when not in use.
-  #   # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-  #   powerManagement.finegrained = false;
+    # Fine-grained power management. Turns off GPU when not in use.
+    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
+    powerManagement.finegrained = false;
 
-  #   # Use the NVidia open source kernel module (not to be confused with the
-  #   # independent third-party "nouveau" open source driver).
-  #   # Support is limited to the Turing and later architectures. Full list of 
-  #   # supported GPUs is at: 
-  #   # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
-  #   # Only available from driver 515.43.04+
-  #   # Currently alpha-quality/buggy, so false is currently the recommended setting.
-  #   open = false;
+    # Use the NVidia open source kernel module (not to be confused with the
+    # independent third-party "nouveau" open source driver).
+    # Support is limited to the Turing and later architectures. Full list of 
+    # supported GPUs is at: 
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Only available from driver 515.43.04+
+    # Currently alpha-quality/buggy, so false is currently the recommended setting.
+    open = false;
 
-  #   # Enable the Nvidia settings menu,
-  #   # accessible via `nvidia-settings`.
-  #   nvidiaSettings = true;
+    # Enable the Nvidia settings menu,
+    # accessible via `nvidia-settings`.
+    nvidiaSettings = true;
 
-  #   # Optionally, you may need to select the appropriate driver version for your specific GPU.
-  #   package = config.boot.kernelPackages.nvidiaPackages.legacy_340;
-  # };
+    # Optionally, you may need to select the appropriate driver version for your specific GPU.
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_340;
+  };
 
   services = {
     xserver = {
@@ -98,7 +98,7 @@
 
       # uncomment for nvidia drivers
       # Load nvidia driver for Xorg and Wayland
-      # videoDrivers = [ "nvidia" ];
+      videoDrivers = [ "nvidia" ];
 
       # the display manager handles user login
       # compatible with wayland: gdm, sddm
@@ -106,7 +106,7 @@
       displayManager.gdm.enable = true;
 
       # Enable the GNOME Desktop Environment
-      # desktopManager.gnome.enable = true;
+      desktopManager.gnome.enable = true;
 
       # Configure keymap in X11
       xkb = {
@@ -178,7 +178,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   # uncomment for nvidia drivers
-  # nixpkgs.config.nvidia.acceptLicense = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
 
   environment = {
     shells = with pkgs; [ bash ];
@@ -206,16 +206,16 @@
       home-manager # user environment management
 
       # from here, wayland + hyprland related packages
-      wayland      # wayland protocol
-      hyprland     # hyprland window manager
-      kitty        # default terminal in hyprland
-      firefox-wayland
-      waybar       # app bar
-      hyprpaper    # wallpapers
-      wl-clipboard # clipboard manager
-      wtype        # type special characters
-      grim         # screenshot
-      slurp        # select area for screenshot
+      # wayland      # wayland protocol
+      # hyprland     # hyprland window manager
+      # kitty        # default terminal in hyprland
+      # firefox-wayland
+      # waybar       # app bar
+      # hyprpaper    # wallpapers
+      # wl-clipboard # clipboard manager
+      # wtype        # type special characters
+      # grim         # screenshot
+      # slurp        # select area for screenshot
     ];
   };
 
@@ -228,14 +228,14 @@
       vimAlias = true;
     };
 
-    hyprland = {
-      enable = true;
-      xwayland.enable = true;
-    };
+    # hyprland = {
+    #   enable = true;
+    #   xwayland.enable = true;
+    # };
 
-    waybar = {
-      enable = true;
-    };
+    # waybar = {
+    #   enable = true;
+    # };
   };
 
   fonts = {
