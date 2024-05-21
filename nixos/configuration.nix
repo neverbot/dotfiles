@@ -199,15 +199,9 @@
       git 
       gh              # github cli 
       lynx            # text-mode web browser
-      lshw            # hardware info
-      pciutils        # hardware info
-      inxi            # hardware info
-      glxinfo
-      vulkan-tools
-      wayland-utils
-      wmctrl
-      xorg.xdpyinfo
-      xorg.xdriinfo
+      # hardware info
+      lshw pciutils inxi glxinfo vulkan-tools 
+      wayland-utils wmctrl xorg.xdpyinfo xorg.xdriinfo
 
       home-manager    # user environment management
 
