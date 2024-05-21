@@ -217,6 +217,7 @@
       grim            # screenshot
       slurp           # select area for screenshot
       xorg.xbacklight # control screen brightness
+      kbdlight        # control keyboard backlight
     ];
   };
 
