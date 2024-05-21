@@ -197,25 +197,32 @@
       nano 
       wget 
       git 
-      gh           # github cli 
-      lynx         # text-mode web browser
-      lshw         # hardware info
-      pciutils     # hardware info
-      inxi         # hardware info
+      gh              # github cli 
+      lynx            # text-mode web browser
+      lshw            # hardware info
+      pciutils        # hardware info
+      inxi            # hardware info
+      glxinfo
+      vulkan-tools
+      wayland-utils
+      wmctrl
+      xorg.xdpyinfo
+      xorg.xdriinfo
 
-      home-manager # user environment management
+      home-manager    # user environment management
 
       # from here, wayland + hyprland related packages
-      wayland      # wayland protocol
-      hyprland     # hyprland window manager
-      kitty        # default terminal in hyprland
+      wayland         # wayland protocol
+      hyprland        # hyprland window manager
+      kitty           # default terminal in hyprland
       firefox-wayland
-      waybar       # app bar
-      hyprpaper    # wallpapers
-      wl-clipboard # clipboard manager
-      wtype        # type special characters
-      grim         # screenshot
-      slurp        # select area for screenshot
+      waybar          # app bar
+      hyprpaper       # wallpapers
+      wl-clipboard    # clipboard manager
+      wtype           # type special characters
+      grim            # screenshot
+      slurp           # select area for screenshot
+      xorg.xbacklight # control screen brightness
     ];
   };
 
