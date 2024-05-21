@@ -199,6 +199,8 @@
       git 
       gh              # github cli 
       lynx            # text-mode web browser
+      killall         # kill processes by name
+      
       # hardware info
       lshw pciutils inxi glxinfo vulkan-tools 
       wayland-utils wmctrl xorg.xdpyinfo xorg.xdriinfo
