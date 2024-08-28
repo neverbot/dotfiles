@@ -24,14 +24,14 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-BLUE_BG_CYAN="\[\033[44m\]\[\033[36m\]"
+BLUE_BG_WHITE="\[\033[44m\]\[\033[39m\]"
 GRAY="\[\033[1;30m\]"
 LIGHT_BLUE="\[\033[1;34m\]"
 RESET="\[\033[0m\]"
 CYAN="\[\033[0;36m\]"
 LIGHT_CYAN="\[\033[1;36m\]"
 BRANCH="\$(parse_git_branch)"
-PS1="${BLUE_BG_CYAN}\t${RESET}${CYAN} \u${LIGHT_BLUE}@${CYAN}\h${LIGHT_CYAN}\w${CYAN}${BRANCH}${LIGHT_BLUE}\$${RESET} "
+PS1="${BLUE_BG_WHITE}\t${RESET}${CYAN} \u${LIGHT_BLUE}@${CYAN}\h${LIGHT_CYAN}\w${CYAN}${BRANCH}${LIGHT_BLUE}\$${RESET} "
 
 # If this is an xterm set the title to user@host:dir
 #case "$TERM" in
