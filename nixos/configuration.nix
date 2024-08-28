@@ -100,6 +100,8 @@
       # Load nvidia driver for Xorg and Wayland
       # videoDrivers = [ "nvidia" ];
 
+      videoDrivers = [ "nouveau" ];
+
       # the display manager handles user login
       # compatible with wayland: gdm, sddm
       # displayManager.sddm.enable = true;
@@ -186,6 +188,7 @@
     variables = {
       EDITOR = "nvim";
       VISUAL = "nvim";
+      TERMINAL = "alacritty";
     };
 
     # List packages installed in system profile. To search, run:
@@ -209,7 +212,8 @@
       # from here, wayland + hyprland related packages
       wayland         # wayland protocol
       hyprland        # hyprland window manager
-      kitty           # default terminal in hyprland
+      # kitty         # default terminal in hyprland
+      alacritty       # default terminal in hyprland
       firefox-wayland
       waybar          # app bar
       hyprpaper       # wallpapers
@@ -297,6 +301,10 @@
           source = /home/neverbot/dotfiles/nixos/waybar;
           recursive = true;
         };
+        ".config/alacritty" = {
+          source = /home/neverbot/dotfiles/nixos/alacritty;
+          recursive = true;
+        };
       };
     };
 
@@ -323,12 +331,8 @@
         userEmail = "ivan@neverbot.com";
       };
 
-      kitty = {
+      alacritty = {
         enable = true;
-        settings = {
-          # padding vertical and horizontal
-          window_padding_width = "5 10";
-        };
       };
     };
   };
