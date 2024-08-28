@@ -1,5 +1,5 @@
 import = [
-  "./theme.toml"
+  "~/.config/alacritty/theme.toml"
 ]
 
 [cursor]
