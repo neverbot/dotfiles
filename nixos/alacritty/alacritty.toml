@@ -31,3 +31,8 @@ lines = 85
 x = 5
 y = 10
 	
+[keyboard]
+bindings = [
+ { key = "V",     mods = "Command",       action = "Paste" },
+ { key = "C",     mods = "Command",       action = "Copy" },
+]
