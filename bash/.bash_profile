@@ -24,5 +24,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   # help with macos not finding python
   alias python=/usr/bin/python3
+
+  # stop using clang as an alias of gcc
+  alias gcc='gcc-14'
 fi
 
