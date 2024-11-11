@@ -1,8 +1,32 @@
 {
   "window.newWindowDimensions": "inherit",
+  "window.nativeFullScreen": true,
   "explorer.confirmDelete": false,
+
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Dracula Theme Soft",
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.enablePreview": true,
+  "workbench.tips.enabled": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.tree.indent": 10,
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": true,
+  "workbench.tree.enableStickyScroll": false,
+
+  "breadcrumbs.enabled": false,
+  "scm.diffDecorations": "none",
+  "problems.decorations.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "vscsm.showBranchName": true,
+  "git.decorations.enabled": true,
+ 
+  "editor.emptySelectionClipboard": true,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.lineNumbers": "on",
+  "editor.guides.indentation": true,
   "editor.inlineSuggest.enabled": true,
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
@@ -10,20 +34,79 @@
   "editor.detectIndentation": false,
   "editor.renderLineHighlight": "none",
   "editor.occurrencesHighlight": "off",
-  "editor.fontSize": 12,
   "editor.formatOnSave": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
   "editor.scrollBeyondLastLine": false,
-  "editor.padding.bottom": 100,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
   "editor.minimap.enabled": false,
+  "editor.hover.delay": 500,
+  "editor.hover.enabled": true,
+  "editor.matchBrackets": "always",
+  "editor.colorDecorators": true,
+  "editor.lightbulb.enabled": "off",
+  "editor.selectionHighlight": false,
+  "editor.overviewRulerBorder": false,
+  "editor.renderControlCharacters": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  // Include "-" in word selection.
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.linkedEditing": true,
+  "editor.accessibilitySupport": "off",
+  "editor.cursorBlinking": "blink",
+  "editor.stickyScroll.enabled": false,
+
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "json": false,
+    "yaml": true,
+    "javascript": true
+  },
+  "chat.editor.wordWrap": "off",
+
   "terminal.integrated.cursorBlinking": true,
+  
   "files.associations": {
     "*.tailwind.css": "tailwindcss"
   },
+  "files.trimTrailingWhitespace": false,
+  "files.insertFinalNewline": false,
+  "files.trimFinalNewlines": false,
+  
+  "editor.fontFamily": "Menlo, Monaco, monospace",
+  "editor.fontSize": 12,
+  "editor.fontWeight": 400,
+  "editor.lineHeight": 18,
+  "editor.padding.top": 16,
+  "editor.padding.bottom": 100,
+  // "editor.suggestFontSize": 16,
+  // "editor.suggestLineHeight": 30,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontWeight": 400,
+  "terminal.integrated.fontFamily": "Menlo, Monaco, monospace",
+  "chat.editor.fontFamily": "Menlo, Monaco, monospace",
+
+  "search.useIgnoreFiles": false,
+  "search.exclude": {
+      "**/vendor": true,
+      "**/public": true,
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/coverage": true,
+      "**/package-lock.json": true
+  },
+
   "eslint.format.enable": true,
   "eslint.useFlatConfig": true,
   "eslint.options": {},
@@ -36,17 +119,6 @@
     "vue",
     "html"
   ],
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "vscsm.showBranchName": true,
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": true,
-    "markdown": true,
-    "scminput": false,
-    "json": false,
-    "yaml": true,
-    "javascript": true
-  },
   "[json]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnSave": true,

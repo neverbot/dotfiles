@@ -12,9 +12,12 @@ Files:
    * Install every extension in the list: `cat extensions.txt | xargs -n 1 code --install-extension`.
    * To remove every extension installed: `code --list-extensions | xargs -n 1 code --uninstall-extension`.
 
-Notes: Use hard links on Mac OS so the contents are always in sync. 
+Notes: Use soft links so the contents are always in sync. 
 
 ```bash
-ln /Users/<username>/Library/Application\ Support/Code/User/settings.json settings.json
-ln /Users/<username>/Library/Application\ Support/Code/User/keybindings.json keybindings.json
+rm /Users/<username>/Library/Application\ Support/Code/User/keybindings.json 
+rm /Users/<username>/Library/Application\ Support/Code/User/settings.json 
+
+ln -s /<path of this project>/dotfiles/vscode/settings.json /Users/<username>/Library/Application\ Support/Code/User/settings.json
+ln -s /<path of this project>/dotfiles/vscode/keybindings.json /Users/<username>/Library/Application\ Support/Code/User/keybind ings.json
 ```
