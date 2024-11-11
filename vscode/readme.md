@@ -19,5 +19,5 @@ rm /Users/<username>/Library/Application\ Support/Code/User/keybindings.json
 rm /Users/<username>/Library/Application\ Support/Code/User/settings.json 
 
 ln -s /<path of this project>/dotfiles/vscode/settings.json /Users/<username>/Library/Application\ Support/Code/User/settings.json
-ln -s /<path of this project>/dotfiles/vscode/keybindings.json /Users/<username>/Library/Application\ Support/Code/User/keybind ings.json
+ln -s /<path of this project>/dotfiles/vscode/keybindings.json /Users/<username>/Library/Application\ Support/Code/User/keybindings.json
 ```
