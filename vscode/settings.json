@@ -57,7 +57,7 @@
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   // Include "-" in word selection.
-  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  // "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
   "editor.linkedEditing": true,
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "blink",
