@@ -3,10 +3,8 @@
 
 Files: 
 
-- `settings.json`: The Global configuration files, just copy its content.
-
-  Use hard links on Mac OS so the contents are always in sync.
-  `ln /Users/<username>/Library/Application\ Support/Code/User/settings.json settings.json`
+- `settings.json`: The Global configuration file, just copy its content.
+- `keybindings.json`: The key bindings configuration file, just copy its content.
 
 - `extensions.txt`: List of extensions used.
 
@@ -14,3 +12,9 @@ Files:
    * Install every extension in the list: `cat extensions.txt | xargs -n 1 code --install-extension`.
    * To remove every extension installed: `code --list-extensions | xargs -n 1 code --uninstall-extension`.
 
+Notes: Use hard links on Mac OS so the contents are always in sync. 
+
+```bash
+ln /Users/<username>/Library/Application\ Support/Code/User/settings.json settings.json
+ln /Users/<username>/Library/Application\ Support/Code/User/keybindings.json keybindings.json
+```
