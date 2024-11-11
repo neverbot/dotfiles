@@ -1,1 +1,70 @@
-/Users/ialonso/Library/Application Support/Code/User/settings.json
+{
+  "window.newWindowDimensions": "inherit",
+  "explorer.confirmDelete": false,
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Dracula Theme Soft",
+  "editor.inlineSuggest.enabled": true,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.renderLineHighlight": "none",
+  "editor.occurrencesHighlight": "off",
+  "editor.fontSize": 12,
+  "editor.formatOnSave": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.scrollBeyondLastLine": false,
+  "editor.padding.bottom": 100,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.minimap.enabled": false,
+  "terminal.integrated.cursorBlinking": true,
+  "files.associations": {
+    "*.tailwind.css": "tailwindcss"
+  },
+  "eslint.format.enable": true,
+  "eslint.useFlatConfig": true,
+  "eslint.options": {},
+  "eslint.codeActionsOnSave.rules": null,
+  "eslint.validate": [
+    "javascript",
+    "json",
+    "jsonc",
+    "json5",
+    "vue",
+    "html"
+  ],
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "vscsm.showBranchName": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "json": false,
+    "yaml": true,
+    "javascript": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+  },
+  "css.customData": [".vscode/tailwind_directives.json"],
+  "scss.customData": [
+    ".vscode/tailwind_directives.json"
+  ]
+}
