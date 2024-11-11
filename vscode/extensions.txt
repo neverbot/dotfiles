@@ -1,3 +1,4 @@
+be5invis.vscode-custom-css
 bradlc.vscode-tailwindcss
 dbaeumer.vscode-eslint
 dracula-theme.theme-dracula

@@ -138,5 +138,10 @@
   "css.customData": [".vscode/tailwind_directives.json"],
   "scss.customData": [
     ".vscode/tailwind_directives.json"
-  ]
+  ],
+  "vscode_custom_css.imports": [
+    "file:///Users/ialonso/Projects/neverbot/dotfiles/vscode/custom-vscode.css",
+    "file:///Users/ialonso/Projects/neverbot/dotfiles/vscode/vscode-script.js"
+  ],
+  "chat.commandCenter.enabled": false
 }
