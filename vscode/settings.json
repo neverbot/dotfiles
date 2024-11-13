@@ -75,6 +75,7 @@
   "chat.editor.wordWrap": "off",
 
   "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.tabs.enabled": false,
   
   "files.associations": {
     "*.tailwind.css": "tailwindcss"
@@ -142,6 +143,5 @@
   "vscode_custom_css.imports": [
     "file:///Users/ialonso/Projects/neverbot/dotfiles/vscode/custom-vscode.css",
     "file:///Users/ialonso/Projects/neverbot/dotfiles/vscode/vscode-script.js"
-  ],
-  "chat.commandCenter.enabled": false
+  ]
 }
