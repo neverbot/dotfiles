@@ -151,5 +151,8 @@
   "css.format.enable":false,
   "less.format.enable":false,
   "scss.format.enable": false,
-  "stylelint.validate": ["css", "scss"]
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ]
 }
