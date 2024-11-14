@@ -143,5 +143,13 @@
   "vscode_custom_css.imports": [
     "file:///Users/ialonso/Projects/neverbot/dotfiles/vscode/custom-vscode.css",
     "file:///Users/ialonso/Projects/neverbot/dotfiles/vscode/vscode-script.js"
-  ]
+  ],
+  // deactivate default css/scss embeded formatter
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "css.format.enable":false,
+  "less.format.enable":false,
+  "scss.format.enable": false,
+  "stylelint.validate": ["css", "scss"]
 }
