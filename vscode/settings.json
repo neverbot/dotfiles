@@ -147,12 +147,10 @@
   // deactivate default css/scss embeded formatter
   "css.validate": false,
   "less.validate": false,
-  "scss.validate": false,
+  "scss.validate": true,
   "css.format.enable":false,
   "less.format.enable":false,
-  "scss.format.enable": false,
-  "stylelint.validate": [
-    "css",
-    "scss"
-  ]
+  "scss.format.enable": true,
+  "scss.format.newlineBetweenRules": true,
+  "scss.format.newlineBetweenSelectors": true,
 }
