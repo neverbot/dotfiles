@@ -14,7 +14,15 @@ Files:
 
 - `custom-vscode.css` and `vscode-script.js` are for customizing the UI with the *Custom CSS and JS Loader* add-on.
 
-Notes: Use soft links so the contents are always in sync. 
+  Add the following lines to `settings.json`:
+  ```json
+  "vscode_custom_css.imports": [
+    "file://<path of this project>/dotfiles/vscode/custom-vscode.css",
+    "file://<path of this project>/dotfiles/vscode/vscode-script.js"
+  ],
+  ```
+
+Notes: Use soft links so the contents of this project are always in sync. 
 
 ```bash
 rm /Users/<username>/Library/Application\ Support/Code/User/keybindings.json 
