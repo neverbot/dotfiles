@@ -9,6 +9,7 @@ github.copilot-chat
 github.vscode-github-actions
 iosamuel.vuehtml
 leonzalion.vscode-ejs
+mohd-akram.vscode-html-format
 ms-azuretools.vscode-docker
 ms-vscode.sublime-keybindings
 octref.vetur
