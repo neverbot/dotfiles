@@ -57,15 +57,15 @@
 .monaco-tree .monaco-tree-row .label-name,
 .monaco-list .monaco-list-row
 .monaco-icon-label .label-name {
-    font-family: 'Geist Mono', monospace !important;
-    font-size: 14px !important;
+    font-family: "Menlo", "Monaco", monospace !important;
+    font-size: 12px !important;
     font-weight: 400 !important;
-    color: #FFF !important;
+    color: #919191 !important;
 }
 
 .explorer-item-edited {
-  font-family: Geist Mono !important;
-  font-size: 14px !important;
+  font-family: "Menlo", "Monaco", monospace !important;
+  font-size: 12px !important;
 }
 
 /* .monaco-workbench .codicon[class*=codicon-] {
@@ -147,18 +147,24 @@
     background: transparent !important;
 }
 
+.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center {
+  width: 33% !important;
+  max-width: unset;
+  color: #919191 !important;
+}
+
 /* Project Title */
 .titlebar-left {
     justify-content: flex-end !important;
     flex-grow: 0 !important;
-    width: 75px !important;
+    width: 33% !important;
 }
 
 /* Search Label */
 .search-label {
-    font-family: 'Geist Mono' !important;
-    font-size: 14px !important;
-    color: #fff;
+    font-family: "Menlo", "Monaco", monospace !important;
+    font-size: 12px !important;
+    color: #919191;
     display: block;
 }
 
@@ -177,10 +183,15 @@
 
 .titlebar-right > * {
     display: none !important;
+    width: 33% !important;
 }
 
 .command-center-center {
     width: auto !important;
+}
+
+.monaco-workbench .codicon[class*=codicon-] {
+    color: #919191 !important;
 }
 
 /* Command Palette */
@@ -223,9 +234,10 @@
     padding: 16px !important;
     border: none !important;
     /* background-color: rgba(34, 34, 34, .40) !important; */
-    font-family: "Geist Mono" !important;
-    font-size: 16px !important;
+    font-family: "Menlo", "Monaco", monospace !important;
+    font-size: 14px !important;
     margin-bottom: 16px !important;
+    color: #919191;
 }
 
 #command-blur {
