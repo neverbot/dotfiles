@@ -78,7 +78,8 @@
   "terminal.integrated.tabs.enabled": false,
   
   "files.associations": {
-    "*.tailwind.css": "tailwindcss"
+    "*.tailwind.css": "tailwindcss",
+    "*.h": "c"
   },
   "files.trimTrailingWhitespace": false,
   "files.insertFinalNewline": false,
