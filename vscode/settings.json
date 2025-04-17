@@ -4,7 +4,6 @@
   "explorer.confirmDelete": false,
 
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Dracula Theme Soft",
   "workbench.editor.showTabs": "multiple",
   "workbench.editor.enablePreview": true,
   "workbench.tips.enabled": false,
@@ -13,6 +12,7 @@
   "workbench.activityBar.location": "hidden",
   "workbench.statusBar.visible": true,
   "workbench.tree.enableStickyScroll": false,
+  "workbench.panel.defaultLocation": "left",
 
   "breadcrumbs.enabled": false,
   "scm.diffDecorations": "none",
