@@ -140,6 +140,10 @@
     "editor.defaultFormatter": "mohd-akram.vscode-html-format",
     "editor.formatOnSave": true,
   },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnSave": true,
+  },  
   "css.customData": [".vscode/tailwind_directives.json"],
   "scss.customData": [
     ".vscode/tailwind_directives.json"
