@@ -1,8 +1,10 @@
 be5invis.vscode-custom-css
 bradlc.vscode-tailwindcss
+circledev.glsl-canvas
 dbaeumer.vscode-eslint
 docker.docker
 dracula-theme.theme-dracula
+dtoplak.vscode-glsllint
 file-icons.file-icons
 giovdk21.vscode-sublime-merge
 github.copilot
@@ -19,6 +21,7 @@ ms-vscode.cpptools-themes
 ms-vscode.makefile-tools
 ms-vscode.sublime-keybindings
 octref.vetur
+slevesque.shader
 sysoev.language-stylus
 undeadfish.vscode-lpc-lang
 xaver.clang-format

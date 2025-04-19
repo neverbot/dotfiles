@@ -79,6 +79,7 @@
   
   "files.associations": {
     "*.tailwind.css": "tailwindcss",
+    "*.c": "c",
     "*.h": "c"
   },
   "files.trimTrailingWhitespace": false,
@@ -106,7 +107,8 @@
       "**/node_modules": true,
       "**/dist": true,
       "**/coverage": true,
-      "**/package-lock.json": true
+      "**/package-lock.json": true,
+      "**/lib": true,
   },
 
   "eslint.format.enable": true,
@@ -162,4 +164,11 @@
   "scss.format.enable": true,
   "scss.format.newlineBetweenRules": true,
   "scss.format.newlineBetweenSelectors": true,
+  "makefile.configureOnOpen": true,
+  "glsllint.glslangValidatorPath": "/usr/local/bin/glslangValidator",
+  "glsllint.glslangValidatorArgs": [
+    "--stdin",
+  ],
+  "glsllint.fallBackStage": "vert",
+  "glsllint.useIncludeDirOfFile": false,
 }
