@@ -13,6 +13,7 @@
   "workbench.statusBar.visible": true,
   "workbench.tree.enableStickyScroll": false,
   "workbench.panel.defaultLocation": "left",
+  "workbench.iconTheme": "file-icons",
 
   "breadcrumbs.enabled": false,
   "scm.diffDecorations": "none",
@@ -39,7 +40,7 @@
   "editor.snippetSuggestions": "top",
   "editor.scrollBeyondLastLine": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
   },
   "editor.minimap.enabled": false,
   "editor.hover.delay": 500,
@@ -111,6 +112,7 @@
       "**/lib": true,
   },
 
+  // javascript/web
   "eslint.format.enable": true,
   "eslint.useFlatConfig": true,
   "eslint.options": {},
@@ -143,10 +145,44 @@
     "editor.defaultFormatter": "mohd-akram.vscode-html-format",
     "editor.formatOnSave": true,
   },
+
+  // c/c++
   "[c]": {
     "editor.defaultFormatter": "xaver.clang-format",
     "editor.formatOnSave": true,
-  },  
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "C_Cpp.clang_format_style": "file",
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.codeAnalysis.runAutomatically": true,
+  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+  "C_Cpp.codeAnalysis.clangTidy.args": [
+    "--extra-arg=-std=c++17"
+  ],
+  "C_Cpp.codeAnalysis.exclude": {
+    "**/node_modules/**": true,
+    "**/vendor/**": true,
+    "**/public/**": true,
+    "**/dist/**": true,
+    "**/coverage/**": true,
+    "**/package-lock.json": true,
+    "**/lib/**": true,
+    "**/.conan/**": true
+  },
+  "editor.inlayHints.enabled": "off",
+  "makefile.configureOnOpen": true,
+
+  // GLSL
+  "glsllint.glslangValidatorPath": "/opt/homebrew/bin/glslangValidator",
+  "glsllint.glslangValidatorArgs": [
+    "--stdin",
+  ],
+  "glsllint.fallBackStage": "vert",
+  "glsllint.useIncludeDirOfFile": false,
+
+  // vscode custom css
   "css.customData": [".vscode/tailwind_directives.json"],
   "scss.customData": [
     ".vscode/tailwind_directives.json"
@@ -164,11 +200,4 @@
   "scss.format.enable": true,
   "scss.format.newlineBetweenRules": true,
   "scss.format.newlineBetweenSelectors": true,
-  "makefile.configureOnOpen": true,
-  "glsllint.glslangValidatorPath": "/usr/local/bin/glslangValidator",
-  "glsllint.glslangValidatorArgs": [
-    "--stdin",
-  ],
-  "glsllint.fallBackStage": "vert",
-  "glsllint.useIncludeDirOfFile": false,
 }

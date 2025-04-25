@@ -1,6 +1,6 @@
 be5invis.vscode-custom-css
 bradlc.vscode-tailwindcss
-circledev.glsl-canvas
+cs128.cs128-clang-tidy
 dbaeumer.vscode-eslint
 docker.docker
 dracula-theme.theme-dracula
