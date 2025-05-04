@@ -154,12 +154,14 @@
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },
+  "C_Cpp.default.cppStandard": "c++17",
   "C_Cpp.clang_format_style": "file",
   "C_Cpp.intelliSenseEngine": "default",
   "C_Cpp.codeAnalysis.runAutomatically": true,
   "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   "C_Cpp.codeAnalysis.clangTidy.args": [
-    "--extra-arg=-std=c++17"
+    "--extra-arg=-std=c++17",
+    "-std=c++17"
   ],
   "C_Cpp.codeAnalysis.exclude": {
     "**/node_modules/**": true,
@@ -200,4 +202,5 @@
   "scss.format.enable": true,
   "scss.format.newlineBetweenRules": true,
   "scss.format.newlineBetweenSelectors": true,
+  "explorer.confirmDragAndDrop": false,
 }
