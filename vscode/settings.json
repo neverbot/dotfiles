@@ -2,6 +2,7 @@
   "window.newWindowDimensions": "inherit",
   "window.nativeFullScreen": true,
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
 
   "workbench.startupEditor": "none",
   "workbench.editor.showTabs": "multiple",
@@ -155,6 +156,7 @@
     "editor.defaultFormatter": "xaver.clang-format"
   },
   "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.autoAddFileAssociations": false,
   "C_Cpp.clang_format_style": "file",
   "C_Cpp.intelliSenseEngine": "default",
   "C_Cpp.codeAnalysis.runAutomatically": true,
@@ -202,5 +204,4 @@
   "scss.format.enable": true,
   "scss.format.newlineBetweenRules": true,
   "scss.format.newlineBetweenSelectors": true,
-  "explorer.confirmDragAndDrop": false,
 }
