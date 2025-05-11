@@ -87,7 +87,14 @@
   "files.trimTrailingWhitespace": false,
   "files.insertFinalNewline": false,
   "files.trimFinalNewlines": false,
-  
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/.conan": true,
+  },
+
   "editor.fontFamily": "Menlo, Monaco, monospace",
   "editor.fontSize": 12,
   "editor.fontWeight": 400,
