@@ -88,11 +88,24 @@
   "files.insertFinalNewline": false,
   "files.trimFinalNewlines": false,
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/node_modules": true,
-    "**/vendor": true,
-    "**/.conan": true,
+    // files included here do not appear in the file explorer
+    // "**/.git": true,
+    // "**/.svn": true,
+    // "**/node_modules": true,
+    // "**/vendor": true,
+    // "**/.conan": true,
+  },
+
+  "search.useIgnoreFiles": false,
+  "search.exclude": {
+      "**/vendor": true,
+      "**/public": true,
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/coverage": true,
+      "**/package-lock.json": true,
+      "**/lib": true,
+      "**/.conan": true,
   },
 
   "editor.fontFamily": "Menlo, Monaco, monospace",
@@ -108,17 +121,6 @@
   "terminal.integrated.fontWeight": 400,
   "terminal.integrated.fontFamily": "Menlo, Monaco, monospace",
   "chat.editor.fontFamily": "Menlo, Monaco, monospace",
-
-  "search.useIgnoreFiles": false,
-  "search.exclude": {
-      "**/vendor": true,
-      "**/public": true,
-      "**/node_modules": true,
-      "**/dist": true,
-      "**/coverage": true,
-      "**/package-lock.json": true,
-      "**/lib": true,
-  },
 
   // javascript/web
   "eslint.format.enable": true,
