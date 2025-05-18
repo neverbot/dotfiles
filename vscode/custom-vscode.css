@@ -55,17 +55,19 @@
 
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
-.monaco-list .monaco-list-row
-.monaco-icon-label .label-name {
+.monaco-list .monaco-list-row .monaco-icon-label .label-name {
     font-family: "Menlo", "Monaco", monospace !important;
     font-size: 12px !important;
     font-weight: 400 !important;
-    color: #919191 !important;
 }
 
 .explorer-item-edited {
   font-family: "Menlo", "Monaco", monospace !important;
   font-size: 12px !important;
+}
+
+.part.sidebar.left.pane-composite-part {
+  color: #b2b2b2 !important;
 }
 
 /* .monaco-workbench .codicon[class*=codicon-] {
