@@ -116,6 +116,7 @@
   "editor.padding.bottom": 100,
   // "editor.suggestFontSize": 16,
   // "editor.suggestLineHeight": 30,
+  "editor.inlayHints.enabled": "off",
   "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.fontWeight": 400,
@@ -184,8 +185,21 @@
     "**/lib/**": true,
     "**/.conan/**": true
   },
-  "editor.inlayHints.enabled": "off",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/**",
+    "${workspaceFolder}/src/**",
+    "${workspaceFolder}/include/**",
+    "${workspaceFolder}/vendor/**",
+    "${workspaceFolder}/public/**",
+    "${workspaceFolder}/dist/**",
+    "${workspaceFolder}/coverage/**",
+    "${workspaceFolder}/package-lock.json",
+    "${workspaceFolder}/lib/**",
+    "${workspaceFolder}/.conan/**"
+  ],
   "makefile.configureOnOpen": true,
+  "cmake.showConfigureWithDebuggerNotification": false,
+  "cmake.revealLog": "never",
 
   // GLSL
   "glsllint.glslangValidatorPath": "/opt/homebrew/bin/glslangValidator",
