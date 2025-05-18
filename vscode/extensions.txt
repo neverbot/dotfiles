@@ -21,6 +21,7 @@ ms-vscode.cpptools-themes
 ms-vscode.makefile-tools
 ms-vscode.sublime-keybindings
 octref.vetur
+openai.chatgpt
 slevesque.shader
 sysoev.language-stylus
 undeadfish.vscode-lpc-lang
