@@ -3,6 +3,7 @@
   "window.nativeFullScreen": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "telemetry.telemetryLevel": "off",
 
   "workbench.startupEditor": "none",
   "workbench.editor.showTabs": "multiple",
@@ -10,7 +11,6 @@
   "workbench.tips.enabled": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.tree.indent": 10,
-  "workbench.activityBar.location": "hidden",
   "workbench.statusBar.visible": true,
   "workbench.tree.enableStickyScroll": false,
   "workbench.panel.defaultLocation": "left",
@@ -166,11 +166,16 @@
     "editor.defaultFormatter": "xaver.clang-format"
   },
   "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
   "C_Cpp.autoAddFileAssociations": false,
+  "C_Cpp.clang_format_path": "clang-format",
   "C_Cpp.clang_format_style": "file",
+  "C_Cpp.errorSquiggles": "enabled",
   "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
   "C_Cpp.codeAnalysis.runAutomatically": true,
   "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+  "C_Cpp.codeAnalysis.clangTidy.path": "clang-tidy",
   "C_Cpp.codeAnalysis.clangTidy.args": [
     "--extra-arg=-std=c++17",
     "-std=c++17"
@@ -198,8 +203,10 @@
     "${workspaceFolder}/.conan/**"
   ],
   "makefile.configureOnOpen": true,
-  "cmake.showConfigureWithDebuggerNotification": false,
   "cmake.revealLog": "never",
+  "cmake.useCMakePresets": "always",
+  "cmake.loggingLevel": "debug",
+  "cmake.buildDirectory": "${workspaceFolder}/build",
 
   // GLSL
   "glsllint.glslangValidatorPath": "/opt/homebrew/bin/glslangValidator",
