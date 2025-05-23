@@ -11,19 +11,19 @@
   "workbench.tips.enabled": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.tree.indent": 10,
-  "workbench.statusBar.visible": true,
   "workbench.tree.enableStickyScroll": false,
   "workbench.panel.defaultLocation": "left",
   "workbench.iconTheme": "file-icons",
+  "workbench.activityBar.location": "hidden",
 
   "breadcrumbs.enabled": false,
-  "scm.diffDecorations": "none",
   "problems.decorations.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "vscsm.showBranchName": true,
   "git.decorations.enabled": true,
+  "scm.diffDecorations": "gutter",
  
   "editor.emptySelectionClipboard": true,
   "editor.copyWithSyntaxHighlighting": false,
@@ -82,7 +82,8 @@
   "files.associations": {
     "*.tailwind.css": "tailwindcss",
     "*.c": "c",
-    "*.h": "c"
+    "*.h": "c",
+    "*.ejs": "html"
   },
   "files.trimTrailingWhitespace": false,
   "files.insertFinalNewline": false,
@@ -156,7 +157,10 @@
     "editor.defaultFormatter": "mohd-akram.vscode-html-format",
     "editor.formatOnSave": true,
   },
-
+  "[ejs]": {
+    "editor.defaultFormatter": "mohd-akram.vscode-html-format",
+    "editor.formatOnSave": true,
+  },
   // c/c++
   "[c]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
