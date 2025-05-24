@@ -35,7 +35,6 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.renderLineHighlight": "none",
-  "editor.occurrencesHighlight": "off",
   "editor.formatOnSave": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
