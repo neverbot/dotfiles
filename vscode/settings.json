@@ -64,6 +64,7 @@
   "editor.cursorBlinking": "blink",
   "editor.stickyScroll.enabled": false,
 
+  "github.copilot.nextEditSuggestions.enabled": false,
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
@@ -179,9 +180,10 @@
   "C_Cpp.intelliSenseEngine": "disabled",
   "C_Cpp.intelliSenseUpdateDelay": 500,
   "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
-  "C_Cpp.codeAnalysis.runAutomatically": true,
-  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+  "C_Cpp.codeAnalysis.runAutomatically": false,
+  "C_Cpp.codeAnalysis.clangTidy.enabled": false,
   "C_Cpp.codeAnalysis.clangTidy.path": "clang-tidy",
+  "C_Cpp.codeAnalysis.clangTidy.useBuildPath": true,
   "C_Cpp.codeAnalysis.clangTidy.args": [
     "--extra-arg=-std=c++17",
     "-std=c++17"
@@ -212,24 +214,21 @@
   "clangd.arguments": [
     "--background-index",
     "--clang-tidy",
-    "--compile-commands-dir=${workspaceFolder}/build",
     "--completion-style=detailed",
     "--enable-config",
     "--header-insertion=never",
-    "--clang-tidy-checks=*",
     "--all-scopes-completion",
     "--pch-storage=memory",
     "-j=8"
   ],
   "clangd.onConfigChanged": "restart",
-  "clangd.fallbackFlags": [
-    "-std=c++17"
-  ],
+  "clangd.fallbackFlags": [],
   "makefile.configureOnOpen": true,
   "cmake.revealLog": "never",
   "cmake.useCMakePresets": "always",
   "cmake.loggingLevel": "debug",
   "cmake.buildDirectory": "${workspaceFolder}/build",
+  "cmake.showConfigureWithDebuggerNotification": false,
 
   // GLSL
   "glsllint.glslangValidatorPath": "/opt/homebrew/bin/glslangValidator",
@@ -257,4 +256,6 @@
   "scss.format.enable": true,
   "scss.format.newlineBetweenRules": true,
   "scss.format.newlineBetweenSelectors": true,
+
+  "liveServer.settings.donotShowInfoMsg": true,
 }
