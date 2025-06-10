@@ -1,6 +1,5 @@
 be5invis.vscode-custom-css
 bradlc.vscode-tailwindcss
-cs128.cs128-clang-tidy
 dbaeumer.vscode-eslint
 docker.docker
 dracula-theme.theme-dracula
@@ -14,7 +13,7 @@ iosamuel.vuehtml
 leonzalion.vscode-ejs
 llvm-vs-code-extensions.vscode-clangd
 mohd-akram.vscode-html-format
-ms-azuretools.vscode-docker
+ms-azuretools.vscode-containers
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
@@ -23,7 +22,9 @@ ms-vscode.makefile-tools
 ms-vscode.sublime-keybindings
 octref.vetur
 openai.chatgpt
+ritwickdey.liveserver
 slevesque.shader
 sysoev.language-stylus
+tamasfe.even-better-toml
 undeadfish.vscode-lpc-lang
 xaver.clang-format
