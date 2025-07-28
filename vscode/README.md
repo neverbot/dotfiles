@@ -1,5 +1,14 @@
 
-# Visual Studio Code configuration backup
+# Visual Studio Code 
+
+## Command line
+
+```bash
+mkdir $HOME/bin
+ln -s "/Applications/dev/Visual Studio Code.app/Contents/Resources/app/bin/code" $HOME/bin/code
+```
+
+## Configuration backup
 
 Files: 
 
