@@ -75,6 +75,9 @@
     "javascript": true
   },
   "chat.editor.wordWrap": "off",
+  "chat.editor.fontFamily": "Menlo, Monaco, monospace",
+  "chat.editing.confirmEditRequestRetry": false,
+  "chat.tools.autoApprove": true,
 
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.tabs.enabled": false,
@@ -122,13 +125,14 @@
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.fontWeight": 400,
   "terminal.integrated.fontFamily": "Menlo, Monaco, monospace",
-  "chat.editor.fontFamily": "Menlo, Monaco, monospace",
 
   // javascript/web
+  "javascript.validate.enable": false,
   "eslint.format.enable": true,
   "eslint.useFlatConfig": true,
   "eslint.options": {},
   "eslint.codeActionsOnSave.rules": null,
+  "eslint.trace.server": "verbose",
   "eslint.validate": [
     "javascript",
     "json",
