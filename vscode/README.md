@@ -12,8 +12,10 @@ ln -s "/Applications/dev/Visual Studio Code.app/Contents/Resources/app/bin/code"
 
 Files: 
 
-- `settings.json`: The Global configuration file, just copy its content.
-- `keybindings.json`: The key bindings configuration file, just copy its content.
+- `settings.json`: The Global configuration file, just copy its content 
+  (cmd+shift+p: Preferences: Open User Settings (JSON))
+- `keybindings.json`: The key bindings configuration file, just copy its content 
+  (cmd+shift+p: Preferences: Open Keyboard Shortcuts (JSON))
 
 - `extensions.txt`: List of extensions used.
 

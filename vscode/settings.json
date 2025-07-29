@@ -262,4 +262,5 @@
   "scss.format.newlineBetweenSelectors": true,
 
   "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.colorTheme": "Monokai",
 }
