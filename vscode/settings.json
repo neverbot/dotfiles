@@ -23,6 +23,7 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "vscsm.showBranchName": true,
   "git.decorations.enabled": true,
+  "git.blame.statusBarItem.enabled": true,
   "scm.diffDecorations": "gutter",
  
   "editor.emptySelectionClipboard": true,
@@ -262,5 +263,4 @@
   "scss.format.newlineBetweenSelectors": true,
 
   "liveServer.settings.donotShowInfoMsg": true,
-  "workbench.colorTheme": "Monokai",
 }
