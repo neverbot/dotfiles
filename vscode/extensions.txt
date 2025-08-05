@@ -1,4 +1,5 @@
 be5invis.vscode-custom-css
+binary-ink.dark-modern-oled-theme-set
 bradlc.vscode-tailwindcss
 dbaeumer.vscode-eslint
 docker.docker
@@ -14,6 +15,7 @@ leonzalion.vscode-ejs
 llvm-vs-code-extensions.vscode-clangd
 mohd-akram.vscode-html-format
 ms-azuretools.vscode-containers
+ms-vscode-remote.remote-containers
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
