@@ -3,7 +3,6 @@ binary-ink.dark-modern-oled-theme-set
 bradlc.vscode-tailwindcss
 dbaeumer.vscode-eslint
 docker.docker
-dracula-theme.theme-dracula
 dtoplak.vscode-glsllint
 file-icons.file-icons
 giovdk21.vscode-sublime-merge

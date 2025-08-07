@@ -263,4 +263,5 @@
   "scss.format.newlineBetweenSelectors": true,
 
   "liveServer.settings.donotShowInfoMsg": true,
+  "docker.extension.dockerEngineAvailabilityPrompt": false,
 }
