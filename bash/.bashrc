@@ -98,7 +98,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # brew update && brew install bash
   # sudo chsh -s /opt/homebrew/bin/bash $(whoami)
 
-
   addToPath /opt/homebrew/bin
   addToPath /opt/homebrew/sbin
 
