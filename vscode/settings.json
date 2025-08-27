@@ -166,6 +166,15 @@
     "editor.defaultFormatter": "mohd-akram.vscode-html-format",
     "editor.formatOnSave": true,
   },
+  // Python
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "black-formatter.args": [
+    "--line-length=79",
+    "--target-version=py33"
+  ],
   // c/c++
   "[c]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
