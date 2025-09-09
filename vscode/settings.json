@@ -82,7 +82,14 @@
 
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.tabs.enabled": false,
-  
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "terminal.integrated.allowWorkspaceConfiguration": true,
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.env.osx": {
+      "PWD": "${workspaceFolder}"
+  },
+
   "files.associations": {
     "*.tailwind.css": "tailwindcss",
     "*.c": "c",
@@ -273,4 +280,5 @@
 
   "liveServer.settings.donotShowInfoMsg": true,
   "docker.extension.dockerEngineAvailabilityPrompt": false,
+  "python.analysis.typeCheckingMode": "standard",
 }
